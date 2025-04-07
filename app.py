@@ -128,6 +128,9 @@ with gr.Blocks(title="Stock Analytics") as demo:
         </style>
         """
     )
-
-demo.launch(server_port=int(os.environ.get("PORT", 7860)), server_name="0.0.0.0")
-
+demo.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 10000)),  # Use Render's default port
+    inbrowser=False,                                 # Don't try to open a browser
+    prevent_thread_lock=False                        # Required for Render to detect port
+)
