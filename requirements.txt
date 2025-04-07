@@ -1,5 +1,6 @@
 gradio
-yfinance
+tensorflow
 pandas
 numpy
-matplotlib
+yfinance
+scikit-learn
